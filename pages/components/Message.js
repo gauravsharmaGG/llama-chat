@@ -8,7 +8,7 @@ const Message = ({ message, isUser }) => {
   }
 
   return (
-    <div className="flex gap-x-4 py-5 border-b">
+    <div className={`flex gap-x-4 py-5 border-b ${isUser ? 'answer-chat' : 'question-chat'}`}>
       <span className="text-2xl" role="presentation">
         {isUser ? <span title="User">👤</span> : <span title="AI">🦙</span>}
       </span>
